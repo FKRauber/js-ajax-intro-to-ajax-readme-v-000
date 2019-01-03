@@ -14,13 +14,7 @@ function getRepositories() {
   req.send();
 }
 
-function showCommits() {
-  const commits = JSON.parse(this.responseText);
-  const commitsList = `<ul>${commits
-    .map(c => '<li><strong>' + c.author.login + '</strong> - ' + c.commit.message + '</li>')
-    .join('')}</ul>`;
-  document.getElementById('commits').innerHTML = commitsList;
-}
+
 function showCommits() {
   const commits = JSON.parse(this.responseText);
   console.log(commits);
